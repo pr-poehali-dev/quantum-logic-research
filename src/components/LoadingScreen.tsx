@@ -27,9 +27,19 @@ export default function LoadingScreen() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-serif text-4xl mb-4"
+          className="font-serif text-4xl mb-2"
+          style={{ color: "#ff3d00", textShadow: "0 0 30px rgba(255,61,0,0.8)" }}
         >
-          Загрузка
+          ⚡ Ka-chow!
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-sm tracking-widest uppercase mb-4"
+          style={{ color: "#ffd600" }}
+        >
+          Запускаем двигатель...
         </motion.div>
         <motion.div
           initial={{ scaleX: 0 }}

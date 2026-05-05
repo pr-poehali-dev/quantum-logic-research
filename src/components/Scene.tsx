@@ -4,22 +4,22 @@ import { useTexture } from "@react-three/drei"
 import * as THREE from "three"
 
 const images = [
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%281%29-KqS753y9z7eEkZKIh0rzbgD3jJjMCl.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%284%29-GDfu68kc6bpcQiAUe7C5xMIJmnXCDm.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2810%29-OrLucPOAahIph0YnVgVuGUnsPTaNx8.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%282%29-rd1lKJeWsJYrLCZ17qTQLNZkRimW75.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%288%29-JyAOFn1dBSpZSlD8nANRaq4hk568jg.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%283%29-6VLx3zL2hBDFGSxS4PT00r5a1Mvzgi.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2815%29-WfPVVoZCDiLzMEXhHsDMlLYpZnZowN.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2818%29-Btt8C4BM3F1RXnCwD8WyrscyQQeKWR.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2813%29-X6FjDEWxC3gOkMLPxS2UJxksXtcq6j.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2817%29-y3fTE1IgoWebjYSuTTnt0zsgeyEt6I.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2823%29-A5m4nKEHgoh0oNyb6jLQaU0Ye50cvA.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2811%29-Y6InBk3wTZFovUr6jnnZWaPQgWfl6k.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2814%29-SCCwpaEfvTRrvqlTWqp1MFs5MIBpuV.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2812%29-7WvqhUk9iih5UFMt305jeX9EfTDRGd.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2819%29-sPRqu4ZKsZXybhLs7ecdEYAzTXy6t5.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motion%20Blur%20Photography%20%2820%29-AYYzJPYYfPbM6vSYJGhyWBLNTjdPIx.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/41965549-f53f-4e8d-933e-b7ff2c8567cc.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/f488c970-e357-4812-af60-f2f7a3ed7c14.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/9add50e7-bcdc-4ecc-8fa9-aa01d90d203c.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/38ab31c3-b823-451d-95ca-56ae5d654734.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/5d84de74-43d7-4ccf-a8d2-06d64910767c.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/50f9330b-9225-47a9-a1a7-c58f904623eb.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/68c77ac6-4653-4c7d-9dc5-2d2bd6988f0f.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/e8adbfb0-8148-42d8-8065-70a540e0244a.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/41965549-f53f-4e8d-933e-b7ff2c8567cc.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/f488c970-e357-4812-af60-f2f7a3ed7c14.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/9add50e7-bcdc-4ecc-8fa9-aa01d90d203c.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/38ab31c3-b823-451d-95ca-56ae5d654734.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/5d84de74-43d7-4ccf-a8d2-06d64910767c.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/50f9330b-9225-47a9-a1a7-c58f904623eb.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/68c77ac6-4653-4c7d-9dc5-2d2bd6988f0f.jpg",
+  "https://cdn.poehali.dev/projects/741b0a43-f215-42aa-90f6-0f4a3ec48929/files/e8adbfb0-8148-42d8-8065-70a540e0244a.jpg",
 ]
 
 const imagePositions = [
@@ -243,11 +243,12 @@ export default function Scene() {
 
   return (
     <>
-      {/* Ambient lighting */}
-      <ambientLight intensity={0.4} />
-      <pointLight position={[10, 10, 10]} intensity={0.6} />
-      <pointLight position={[-10, -10, -5]} intensity={0.4} color="#ff6b35" />
-      <spotLight position={[0, 5, 5]} intensity={0.3} angle={0.6} penumbra={1} />
+      {/* Cars-themed lighting */}
+      <ambientLight intensity={0.3} />
+      <pointLight position={[10, 10, 10]} intensity={0.8} color="#ff3d00" />
+      <pointLight position={[-10, -10, -5]} intensity={0.6} color="#ffd600" />
+      <pointLight position={[0, 0, 5]} intensity={0.4} color="#ff6b35" />
+      <spotLight position={[0, 8, 5]} intensity={0.5} angle={0.6} penumbra={1} color="#ff3d00" />
 
       {textures.map((texture, index) => (
         <FloatingImage key={index} texture={texture} index={index} rotation={rotation} />
